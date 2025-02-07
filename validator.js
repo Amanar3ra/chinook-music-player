@@ -21,7 +21,7 @@ const albumPostSchema = Joi.object(
         ReleaseYear: Joi.number().optional(),
         ArtistId: Joi.number().integer()
     }
-)
+);
 
 //Schema for post/patch in track
 const tracksSchema = Joi.object({

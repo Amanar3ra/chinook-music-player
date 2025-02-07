@@ -7,10 +7,10 @@ import mediaRouter from './routes/media.js'
 import themesRouter from './routes/themes.js'
 
 
-const app = express();
+const app = express()
 
 //Establish a connection to our database
-export const db = new Database('./database/chinook.sqlite', {fileMustExist: true});
+export const db = new Database('./database/chinook.sqlite', {fileMustExist: true})
 
 
 //Middleware
