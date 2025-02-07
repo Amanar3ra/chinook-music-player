@@ -12,7 +12,7 @@ const artistPatchSchema = Joi.object(
     {
         Name: Joi.string().max(120)
     }
-)
+);
 
 //Schema for post/patch in album
 const albumPostSchema = Joi.object(
