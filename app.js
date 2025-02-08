@@ -9,6 +9,8 @@ import themesRouter from './routes/themes.js'
 
 const app = express()
 
+//For testing purpose
+
 //Establish a connection to our database
 export const db = new Database('./database/chinook.sqlite', {fileMustExist: true})
 
