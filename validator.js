@@ -14,6 +14,8 @@ const artistPatchSchema = Joi.object(
     }
 );
 
+
+
 //Schema for post/patch in album
 const albumPostSchema = Joi.object(
     {
