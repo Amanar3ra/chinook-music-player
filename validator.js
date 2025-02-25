@@ -1,5 +1,4 @@
-import Joi from "joi"
-
+const Joi = require("joi")
 //Schema for post in artist
 const artistPostSchema = Joi.object(
     {
@@ -34,7 +33,7 @@ const tracksSchema = Joi.object({
 });
 
 //Function for post in artist
-export const validatePostArtist = payload => {
+const validatePostArtist = payload => {
     const result = artistPostSchema.validate(payload);
     if(result.error){
         const errorMessages = result.error.details.map(detail => ({
@@ -47,7 +46,7 @@ export const validatePostArtist = payload => {
 }
 
 //Function for patch in artist
-export const validatePatchArtist = payload => {
+const validatePatchArtist = payload => {
     const result = artistPatchSchema.validate(payload);
     if(result.error){
         const errorMessages = result.error.details.map(detail => ({
@@ -60,7 +59,7 @@ export const validatePatchArtist = payload => {
 }
 
 //Function for post/patch in album
-export const validateAlbum = payload => {
+const validateAlbum = payload => {
     const result = albumPostSchema.validate(payload);
     if(result.error){
         const errorMessages = result.error.details.map(detail => ({
@@ -73,7 +72,7 @@ export const validateAlbum = payload => {
 }
 
 //Function for post/patch in album
-export const validateTrack = payload => {
+const validateTrack = payload => {
     const result = tracksSchema.validate(payload);
     if(result.error){
         const errorMessages = result.error.details.map(detail => ({
@@ -83,4 +82,11 @@ export const validateTrack = payload => {
     }
 
     return null
+}
+
+module.exports = {
+    validatePostArtist,
+    validatePatchArtist,
+    validateAlbum,
+    validateTrack
 }
